@@ -160,11 +160,11 @@ elif st.session_state.page > len(questions):
     st.title("💖 Fim do Jogo! 💖")
     
     if st.session_state.score == 8:
-        msg = "Uau! Você acertou TUDO! Isso só prova que você presta atenção em cada detalhe do nosso amor. Eu te amo infinitamente! 🏆💞🌿"
+        msg = "Uau! Você acertou TUDO! Isso só prova que você presta atenção em cada detalhe do nosso amor. Eu te amo infinitamente! 🏆💞"
     elif st.session_state.score >= 5:
         msg = "Você foi muito bem, amor! Lembra de quase tudo sobre a gente. Meu coração é todo seu! 🥰💚"
     else:
-        msg = "Parece que alguém precisa reviver nossos momentos para refrescar a memória, hein? 😂 Mas eu continuo te amando do tamanho do universo! 💖🌿"
+        msg = "Parece que alguém precisa reviver nossos momentos para refrescar a memória, hein? 😂 Mas eu continuo te amando do tamanho do universo! 💖"
         
     st.subheader(f"Sua Pontuação: {st.session_state.score} de 8 acertos!")
     st.write(f"### {msg}")
@@ -172,7 +172,7 @@ elif st.session_state.page > len(questions):
     try:
         st.image("foto_final.png", use_container_width=True, caption="Pra sempre nós! ♾️💕")
     except:
-        st.info("Coloque uma foto chamada 'foto_final.jpg' na mesma pasta para aparecer na tela final! 📸")
+        st.info("Coloque uma foto chamada 'foto_final.jpeg' na mesma pasta para aparecer na tela final! 📸")
         
     st.write("---")
     if st.button("Jogar Novamente 🔄💚"):
