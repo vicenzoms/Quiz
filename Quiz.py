@@ -113,7 +113,7 @@ if st.session_state.page == 0:
     st.title("💖 Bem-vindo ao Nosso Quiz de Amor! 💖")
     st.write("Preparei esse joguinho para testar sua memória sobre nós. Será que você lembra de tudo? 🥰")
     
-    # Substitua "foto_inicio.jpg" pelo nome do seu arquivo de imagem
+    # Substitua "foto_inicio.png" pelo nome do seu arquivo de imagem
     try:
         st.image("foto_inicio.jpg", use_container_width=True, caption="Nós dois juntinhos! 👩‍❤️‍👨")
     except:
