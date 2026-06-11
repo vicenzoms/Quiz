@@ -97,7 +97,7 @@ questions = [
     },
     {
         "q": "8 Questão) Vou te amar até o fim dos tempos e continuar te amando para sempre? ♾️💕",
-        "options": ["SIM", "Com Certeza!"], 
+        "options": ["SIM"], 
         "answer": "SIM"
     }
 ]
@@ -148,7 +148,7 @@ elif 1 <= st.session_state.page <= len(questions):
         if st.session_state.user_choice == current_q["answer"]:
             st.success(f"💚 VOCÊ ACERTOU, MEU AMOR! 💚 A resposta é mesmo '{current_q['answer']}'! 🎉💘")
         else:
-            st.error(f"💔 VOCÊ ERROU! 💔 A resposta correta era: {current_q['answer']}. Poxa vida! 🥺")
+            st.error(f"💔 VOCÊ ERROU! 💔 A resposta correta era: {current_q['answer']}. Poxa Paixão! 🥺")
             
         if st.button("Próxima Pergunta ➡️"):
             st.session_state.page += 1
