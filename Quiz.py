@@ -115,7 +115,7 @@ if st.session_state.page == 0:
     
     # Substitua "foto_inicio.png" pelo nome do seu arquivo de imagem
     try:
-        st.image("foto_inicio.jpg", use_container_width=True, caption="Nós dois juntinhos! 👩‍❤️‍👨")
+        st.image("foto_inicio.png", use_container_width=True, caption="Nós dois juntinhos! 👩‍❤️‍👨")
     except:
         st.info("Coloque uma foto chamada 'foto_inicio.jpg' na mesma pasta do código para ela aparecer aqui! 📸")
     
