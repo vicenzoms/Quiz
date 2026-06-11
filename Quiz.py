@@ -170,7 +170,7 @@ elif st.session_state.page > len(questions):
     st.write(f"### {msg}")
     
     try:
-        st.image("foto_final.jpg", use_container_width=True, caption="Pra sempre nós! ♾️💕")
+        st.image("foto_final.png", use_container_width=True, caption="Pra sempre nós! ♾️💕")
     except:
         st.info("Coloque uma foto chamada 'foto_final.jpeg' na mesma pasta para aparecer na tela final! 📸")
         
