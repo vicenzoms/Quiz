@@ -1,16 +1,9 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Jun 11 17:18:15 2026
-
-@author: Vicenzo
-"""
-
 import streamlit as st
 
 # Configuração da aba do navegador
 st.set_page_config(page_title="Nosso Jogo de Amor 💖", page_icon="💝", layout="centered")
 
-# Injeção de CSS para deixar tudo rosa com detalhes verdes
+# Injeção de CSS para deixar tudo rosa com detalhes verdes (Botões Atualizados!)
 st.markdown("""
     <style>
     /* Fundo principal rosa bebê */
@@ -28,12 +21,12 @@ st.markdown("""
         font-size: 18px !important;
         font-weight: bold;
     }
-    /* Botões verdes (detalhes) */
+    /* Botões rosa claro com letras verdes */
     .stButton>button {
-        background-color: #4CAF50 !important; 
-        color: white !important;
+        background-color: #ffb6c1 !important; /* Fundo rosa claro */
+        color: #2e7d32 !important; /* Texto verde */
         border-radius: 15px;
-        border: 2px solid #2e7d32;
+        border: 2px solid #2e7d32; /* Borda verde combinando com a letra */
         padding: 10px 24px;
         font-weight: bold;
         font-size: 18px;
@@ -41,7 +34,8 @@ st.markdown("""
         transition: 0.3s;
     }
     .stButton>button:hover {
-        background-color: #45a049 !important;
+        background-color: #ff9aa2 !important; /* Rosa um pouco mais forte ao passar o mouse */
+        color: #1b5e20 !important; /* Verde mais escuro ao passar o mouse */
         transform: scale(1.02);
     }
     /* Caixa das opções de resposta */
@@ -64,7 +58,7 @@ if 'answered' not in st.session_state:
 if 'user_choice' not in st.session_state:
     st.session_state.user_choice = None
 
-# Banco de Perguntas baseado no seu documento
+# Banco de Perguntas
 questions = [
     {
         "q": "1 Questão) Onde foi o nosso primeiro encontro? 💘",
@@ -103,7 +97,7 @@ questions = [
     },
     {
         "q": "8 Questão) Vou te amar até o fim dos tempos e continuar te amando para sempre? ♾️💕",
-        "options": ["SIM", "Com Certeza!"], # Adicionei uma segunda opção para manter o padrão de escolha, ambas amorosas!
+        "options": ["SIM", "Com Certeza!"], 
         "answer": "SIM"
     }
 ]
@@ -113,7 +107,6 @@ if st.session_state.page == 0:
     st.title("💖 Bem-vindo ao Nosso Quiz de Amor! 💖")
     st.write("Preparei esse joguinho para testar sua memória sobre nós. Será que você lembra de tudo? 🥰")
     
-    # Substitua "foto_inicio.png" pelo nome do seu arquivo de imagem
     try:
         st.image("foto_inicio.png", use_container_width=True, caption="Nós dois juntinhos! 👩‍❤️‍👨")
     except:
@@ -141,7 +134,7 @@ elif 1 <= st.session_state.page <= len(questions):
     
     # Botão de confirmar resposta
     if not st.session_state.answered:
-        if st.button("Confirmar Resposta 🌿"):
+        if st.button("Confirmar Resposta 💚 "):
             st.session_state.answered = True
             st.session_state.user_choice = choice
             
@@ -166,7 +159,6 @@ elif 1 <= st.session_state.page <= len(questions):
 elif st.session_state.page > len(questions):
     st.title("💖 Fim do Jogo! 💖")
     
-    # Mensagem fofinha dependendo da pontuação
     if st.session_state.score == 8:
         msg = "Uau! Você acertou TUDO! Isso só prova que você presta atenção em cada detalhe do nosso amor. Eu te amo infinitamente! 🏆💞🌿"
     elif st.session_state.score >= 5:
@@ -177,9 +169,8 @@ elif st.session_state.page > len(questions):
     st.subheader(f"Sua Pontuação: {st.session_state.score} de 8 acertos!")
     st.write(f"### {msg}")
     
-    # Substitua "foto_final.jpg" pelo nome do seu arquivo de imagem
     try:
-        st.image("foto_final.jpg", use_container_width=True, caption="Pra sempre nós! ♾️💕")
+        st.image("foto_final.png", use_container_width=True, caption="Pra sempre nós! ♾️💕")
     except:
         st.info("Coloque uma foto chamada 'foto_final.jpg' na mesma pasta para aparecer na tela final! 📸")
         
